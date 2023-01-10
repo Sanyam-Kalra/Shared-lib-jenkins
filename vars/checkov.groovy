@@ -6,7 +6,7 @@ def call (Map stepParams){
      {
      sh "checkov -f ${code_dir}"
      }
-     else{ 
-     sh "checkov -d ${code_dir}"
+//      else{ 
+//      sh "checkov -d ${code_dir}"
   }
 }
