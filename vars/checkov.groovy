@@ -3,7 +3,6 @@ def call (Map stepParams){
      code_dir="${stepParams.code_dir}"
      echo "${code_dir}" 
      if ( "${code_dir}" == "ec2.tf" )
-     then
      {
      sh "checkov -f ${code_dir}"
      }
