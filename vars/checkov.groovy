@@ -1,6 +1,6 @@
 def call (Map stepParams){
      echo 'Scaning Infrastructure code'
-     Code_Dir="${stepParams.Code_Dir}"
-     echo "${Code_Dir}"
-     sh 'checkov -f "${Code_Dir}"'
+     code_dir="${stepParams.code_dir}"
+     echo "${code_dir}"
+     sh 'checkov -f "${code_dir}"'
 }
