@@ -4,9 +4,9 @@ def call (Map stepParams){
      echo "${code_dir}" 
      if ("${code_dir}" ==~ /.*\.tf$/)   
      {
-     sh "checkov --output=json -f ${code_dir}"
+     sh "checkov --output=junitxml -f ${code_dir} >>checkov.xml"
      }
      else{ 
-     sh "checkov --output=json -d ${code_dir}"
+     sh "checkov --output=junitxml -d ${code_dir} >>checkov.xml"
   }
 }
